@@ -1,0 +1,261 @@
+:root {
+  --color-primary: #D98326;
+  --color-primary-100: #F1ECE6;
+  --color-primary-300: #E0D1B9;
+  --color-primary-700: #A85A1A;
+  --color-info: #76B7CD;
+  --color-info-300: #5A8EAD;
+  --color-gray: #969696;
+  --color-gray-100: #F3F3F3;
+  --color-gray-300: #E5E5E5;
+  --color-gray-350: #c2c2c2;
+  --color-gray-400: #737373;
+  --color-gray-500: #323232;
+  --color-white: #FFFFFF;
+  --header-height: 100px;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 32px;
+  line-height: 48px;
+  color: var(--color-gray-500);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.training-todo-app {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.training-todo-app > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-primary-100);
+}
+
+.training-todo-app > .header > .logo {
+  width: 230.77px;
+  height: 60px;
+}
+
+.training-todo-app > .todo-app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+.training-todo-app > .todo-app-container > .tab-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 73px;
+}
+
+.training-todo-app > .todo-app-container > .tab-header > .tab-link {
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+  position: relative;
+  padding: 0;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray);
+}
+
+.training-todo-app > .todo-app-container > .tab-header > .tab-link:hover {
+  background-color: var(--color-gray-300);
+  color: var(--color-gray-500);
+}
+
+.training-todo-app > .todo-app-container > .tab-header > .tab-link::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  width: 0
+} 
+
+.training-todo-app > .todo-app-container > .tab-header > .tab-link.active {
+  color: var(--color-gray-500);
+}
+
+.training-todo-app > .todo-app-container > .tab-header > .tab-link.active::after {
+  animation: expand-width 0.35s forwards;
+}
+
+@keyframes expand-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.training-todo-app > .todo-app-container > .add-todo {
+  width: 1040px;
+  height: 78px;
+  background-color: var(--color-primary-100);
+  border-radius: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .input {
+  width: 840px;
+  height: 78px;
+  border: none;
+  background-color: var(--color-primary-100);
+  font-size: 32px;
+  line-height: 48px;
+  color: var(--color-gray-500);
+  padding: 0 170px 0 30px;
+  border-radius: 50px;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .input:focus-visible {
+  outline: var(--color-primary) auto 5px;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .input:focus-visible + .button {
+  border-color: var(--color-primary);
+  border-left: none;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 78px;
+  background-color: var(--color-info);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-size: 38px;
+  line-height: 57px;
+  font-family: 600;
+  text-transform: uppercase;
+  border-radius: 0 50px 50px 0;
+  border: 1px solid transparent;
+  border-left: none;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .button:hover {
+  background-color: var(--color-info-300);
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content {
+  background-color: var(--color-primary-100);
+  /* min-height: 529px; */
+  width: 960px;
+  border-radius: 50px;
+  padding: 0px 40px 20px 40px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: none;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content.show {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  gap: 20px;
+  position: relative;
+  padding: 0 40px;
+  cursor: pointer;
+  width: calc(100% - 80px);
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item:hover {
+  background-color: var(--color-primary-300);
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item::after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 1px;
+  background-color: var(--color-info);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item > .icon {
+  width: 46px;
+  height: 46px;
+  background: url(../images/circle.svg) no-repeat center center;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item.selected > .icon {
+  background-image: url(../images/check-circle.svg);
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item.selected > .text {
+  color: var( --color-gray-350);
+  text-decoration-line: line-through;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item > .delete {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  opacity: 0.5;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-primary-100);
+  margin: auto 90px 0 auto;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--color-primary);
+  padding: 0;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .clear:hover {
+ text-decoration: underline;
+ text-underline-offset: 4px;
+}
+

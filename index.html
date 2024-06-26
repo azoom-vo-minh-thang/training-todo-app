@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Todo App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <div class="training-todo-app">
+    <section class="header">
+      <img src="./assets/images/logo.svg" alt="Training Todo App Logo" class="logo">
+    </section>
+    <section class="todo-app-container">
+      <div class="tab-header">
+        <button class="tab-link active" onclick="openTab(event, 'personal')">Personal</button>
+        <button class="tab-link" onclick="openTab(event, 'professional')">Professional</button>
+      </div>
+
+      <form class="add-todo">
+        <input type="text" placeholder="What do you need to do?" class="input">
+        <button type="submit" class="button">Add</button>
+      </form>
+
+      <div class="content-wrapper">
+        <div id="personal" class="tab-content show">
+          <ul class="list">
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Personal Work No. 1</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Personal Work No. 2</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Personal Work No. 3</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Personal Work No. 4</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Personal Work No. 5</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+          </ul>
+
+          <button class="clear">
+            <img src="./assets/images/clear-completed.svg" alt="Clear Icon">
+            Clear completed
+          </button>
+        </div>
+        <div id="professional" class="tab-content">
+          <ul class="list">
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Professional Work No. 1</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Professional Work No. 2</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Professional Work No. 3</p>
+              <button class="delete" onclick="deleteItem(event)">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Professional Work No. 4</p>
+              <button class="delete">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+            <li class="item" onclick="selectItem(event)">
+              <div class="icon"></div>
+              <p class="text">Professional Work No. 5</p>
+              <button class="delete">
+                <img src="./assets/images/delete.svg" alt="Delete Icon">
+              </button>
+            </li>
+          </ul>
+
+          <button class="clear">
+            <img src="./assets/images/clear-completed.svg" alt="Clear Icon">
+            Clear completed
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
