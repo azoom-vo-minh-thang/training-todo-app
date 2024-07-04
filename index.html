@@ -25,7 +25,7 @@
         <button class="tab-link" onclick="openTab(event, 'professional')">Professional</button>
       </div>
 
-      <form class="add-todo">
+      <form id="add-item-todo" class="add-todo">
         <input type="text" placeholder="What do you need to do?" class="input">
         <button type="submit" class="button">Add</button>
       </form>
@@ -33,14 +33,14 @@
       <div class="content-wrapper">
         <div id="personal" class="tab-content show">
           <ul class="list">
-            <li class="item" onclick="selectItem(event)">
+            <li class="item selected" onclick="selectItem(event)">
               <div class="icon"></div>
               <p class="text">Personal Work No. 1</p>
               <button class="delete" onclick="deleteItem(event)">
                 <img src="./assets/images/delete.svg" alt="Delete Icon">
               </button>
             </li>
-            <li class="item" onclick="selectItem(event)">
+            <li class="item selected" onclick="selectItem(event)">
               <div class="icon"></div>
               <p class="text">Personal Work No. 2</p>
               <button class="delete" onclick="deleteItem(event)">
@@ -70,21 +70,21 @@
             </li>
           </ul>
 
-          <button class="clear">
+          <button class="clear" onclick="clearCompleted()">
             <img src="./assets/images/clear-completed.svg" alt="Clear Icon">
             Clear completed
           </button>
         </div>
         <div id="professional" class="tab-content">
           <ul class="list">
-            <li class="item" onclick="selectItem(event)">
+            <li class="item selected" onclick="selectItem(event)">
               <div class="icon"></div>
               <p class="text">Professional Work No. 1</p>
               <button class="delete" onclick="deleteItem(event)">
                 <img src="./assets/images/delete.svg" alt="Delete Icon">
               </button>
             </li>
-            <li class="item" onclick="selectItem(event)">
+            <li class="item selected" onclick="selectItem(event)">
               <div class="icon"></div>
               <p class="text">Professional Work No. 2</p>
               <button class="delete" onclick="deleteItem(event)">
@@ -114,7 +114,7 @@
             </li>
           </ul>
 
-          <button class="clear">
+          <button class="clear" onclick="clearCompleted()">
             <img src="./assets/images/clear-completed.svg" alt="Clear Icon">
             Clear completed
           </button>

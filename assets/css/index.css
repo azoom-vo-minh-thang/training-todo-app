@@ -4,10 +4,11 @@
   --color-primary-300: #E0D1B9;
   --color-primary-700: #A85A1A;
   --color-info: #76B7CD;
-  --color-info-300: #5A8EAD;
+  --color-info-300: #66cccc;
   --color-gray: #969696;
   --color-gray-100: #F3F3F3;
   --color-gray-300: #E5E5E5;
+  --color-gray-320: #cdcdcd;
   --color-gray-350: #c2c2c2;
   --color-gray-400: #737373;
   --color-gray-500: #323232;
@@ -154,11 +155,20 @@ p {
   cursor: pointer;
   font-size: 38px;
   line-height: 57px;
-  font-family: 600;
+  font-weight: 600;
   text-transform: uppercase;
   border-radius: 0 50px 50px 0;
   border: 1px solid transparent;
   border-left: none;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .button:disabled {
+  background-color: var(--color-gray-320);
+  cursor: not-allowed;
+}
+
+.training-todo-app > .todo-app-container > .add-todo > .button:disabled:hover {
+  background-color: var(--color-gray-320);
 }
 
 .training-todo-app > .todo-app-container > .add-todo > .button:hover {
@@ -170,7 +180,7 @@ p {
   /* min-height: 529px; */
   width: 960px;
   border-radius: 50px;
-  padding: 0px 40px 20px 40px;
+  padding: 0px 40px 0px 40px;
   margin: 0 auto;
   overflow: hidden;
   display: none;
@@ -179,7 +189,7 @@ p {
 .training-todo-app > .todo-app-container > .content-wrapper > .tab-content.show {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 77px;
 }
 
 .training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list {
@@ -196,9 +206,9 @@ p {
   height: 88px;
   gap: 20px;
   position: relative;
-  padding: 0 40px;
+  padding: 0 50px 0px 45px;
   cursor: pointer;
-  width: calc(100% - 80px);
+  width: calc(100% - 95px);
 }
 
 .training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item:hover {
@@ -237,6 +247,11 @@ p {
   border: none;
   margin-left: auto;
   opacity: 0.5;
+  cursor: pointer;
+}
+
+.training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .list > .item > .delete:hover {
+  opacity: 1;
 }
 
 .training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .clear {
@@ -252,10 +267,14 @@ p {
   line-height: 36px;
   color: var(--color-primary);
   padding: 0;
+  width: 265px;
+  height: 76px;
+  border-radius: 50px;
+  border: 1px solid transparent;
 }
 
 .training-todo-app > .todo-app-container > .content-wrapper > .tab-content > .clear:hover {
- text-decoration: underline;
- text-underline-offset: 4px;
+ border-color: var(--color-primary);
+ background-color: var(--color-primary-300);
 }
 
